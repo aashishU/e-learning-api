@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <form action="http://localhost:3000/register" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="student[name]">
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="student[email]">
+            </div>
+            <div>
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="student[password]">
+            </div>
+            <div>
+                <label for="avatar">Upload Avatar :</label>
+                <input type="file" id="avatar" name="image">
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </body>
+
+</html>

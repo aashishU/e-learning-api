@@ -1,0 +1,31 @@
+{
+	"name": "e-learning-api",
+	"version": "1.0.0",
+	"description": "e-learning platform api",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "e-learning-api"
+	},
+	"author": "Ashish Uniyal",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"body-parser": "^1.20.2",
+		"cloudinary": "^1.41.3",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"joi": "^17.12.3",
+		"jsonwebtoken": "^9.0.2",
+		"multer": "^1.4.5-lts.1",
+		"multer-storage-cloudinary": "^4.0.0",
+		"pg": "^8.11.5",
+		"resend": "^3.2.0",
+		"winston": "^3.13.0",
+		"winston-transport": "^4.7.0"
+	}
+}
