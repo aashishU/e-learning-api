@@ -3,16 +3,16 @@
 - It's a rest API where students can register, login and enroll in different courses available.
 - All the endpoints are secured using Jason Web Tokens.
 - Reset Password functionality is also available.
-- Routes to Create, Update and Delete the courses, checks if currentUser is a superuser of not and only "superuser" is authorized to perform CRUD actions.
+- Routes to Create, Update and Delete the courses, firstly checks if currentUser is a superuser of not and only "superuser" is authorized to perform CRUD operations.
 - "superuser" can also register, login and reset password.
-- Notification Emails will be sent in case of Successful Registration, Password Reset or Enrolled in new course.
-- image can be uploaded to make avatar(profile picture). If not image is given, the default image will be assigned to the user
+- Notification Emails will be sent automatically in case of Successful Registration, Password Reset or Enrolled in new course.
+- image can be uploaded to make avatar(profile picture). If no image is given, the default image will be assigned to the user.
 
 ---
 
 #### Features
 
-- Endpoints secured with Json Web Tokens
+- Endpoints are secured with Json Web Tokens
 - Middlewares to check JWT and Access level (isSuperuser)
 - Data validation using JOI package
 - Logging information using Winston package
@@ -22,12 +22,47 @@
 - Automated Emails using Resend
 - Avatar(image) is uploaded to "Cloudinary.com", its {url and filename} will be saved in "student" table under avatar column
   - If no "avatar(image)" is selected, the default image will be assigned to the user
+  - Image upload is achieved by using Multer package
 
+---
+
+### Database Structure
+
+**There are 4 tables**
+
+1. _Student Table_
+   
+   | id | name | email | password(hash) | avatar {url, filename} | enrolled_course |
+   | -- | ---- | ----- | -------------- | ---------------------- | --------------- |
+
+2. _SuperUser Table_
+   
+   | su_id | su_name | su_email | su_password(hash) |
+   | ----- | ------- | -------- | ----------------- |
+
+3. _Course Table_
+   
+   | course_id | course_name | category | level | total_enrollments |
+   | --------- | ----------- | -------- | ----- | ----------------- |
+
+4. _Log Table_
+   
+   | id | level | message | timestamp |
+   | -- | ----- | ------- | --------- |
+   
 ---
 
 #### npm start
 
 - to start the environment
+
+---
+
+#### Seed Data
+
+- All the tables can be created using seedData.js file.
+- This file also contains dummy data that can also be inserted.
+- Just uncomment the desired function and run node app.js
 
 ---
 
