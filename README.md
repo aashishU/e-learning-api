@@ -22,6 +22,7 @@
 - Automated Emails using Resend
 - Avatar(image) is uploaded to "Cloudinary.com", its {url and filename} will be saved in "student" table under avatar column
   - If no "avatar(image)" is selected, the default image will be assigned to the user
+  - To test image upload functionality, "imageTest.html" file is included
   - Image upload is achieved by using Multer package
 
 ---
@@ -62,7 +63,7 @@
 
 - All the tables can be created using seedData.js file.
 - This file also contains dummy data that can also be inserted.
-- Just uncomment the desired function and run node app.js
+- Just uncomment the desired function and run "node app.js"
 
 ---
 
