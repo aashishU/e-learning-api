@@ -47,8 +47,8 @@
 
 4. _Log Table_
    
-   | id | level | message | timestamp |
-   | -- | ----- | ------- | --------- |
+   | id | level (info/error) | message | timestamp |
+   | -- | ------------------ | ------- | --------- |
    
 ---
 
